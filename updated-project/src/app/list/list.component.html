@@ -1,0 +1,12 @@
+<ul>
+	<li *ngFor="let character of characters" [ngClass]="{redText: showZoidberg}">
+		{{character.name}}
+	</li>
+</ul>
+<h4>
+	I made {{money | currency}} last year. It's all about the Washingtons, baby!
+</h4>
+<div>
+	<button (click)="woopWoopWoop()">Lobster Doctor</button>
+</div>
+<img [src]="imageurl" alt="Why Not Zoidberg?" [hidden]="!showZoidberg"/>
