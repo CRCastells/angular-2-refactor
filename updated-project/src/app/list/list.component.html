@@ -1,12 +1,21 @@
-<ul>
-	<li *ngFor="let character of characters" [ngClass]="{redText: showZoidberg}">
-		{{character.name}}
-	</li>
-</ul>
-<h4>
+<table class="table table-hover mt-3 border">
+  <thead class="bg-light font-weight-bold">
+    <tr>
+      <td>Name</td>
+      <td>Age</td>
+    </tr>
+  </thead>
+  <tr class="" *ngFor="let character of characters" [ngClass]="{redText: showZoidberg}">
+    <td>{{character.name}}</td>
+    <td>{{character.age}}</td>
+  </tr>
+</table>
+<h4 class="jumbotron">
 	I made {{money | currency}} last year. It's all about the Washingtons, baby!
 </h4>
 <div>
-	<button (click)="woopWoopWoop()">Lobster Doctor</button>
+  <button class="btn btn-danger float-right" (click)="woopWoopWoop()">Lobster Doctor</button>
 </div>
-<img [src]="imageurl" alt="Why Not Zoidberg?" [hidden]="!showZoidberg"/>
+<div class="text-center">
+  <img class="img-fluid rounded" [src]="imageurl" alt="Why Not Zoidberg?" [hidden]="!showZoidberg" />
+</div>
